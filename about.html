@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>AlgebraHelper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/img/brokencalculator.png" type="image/x-icon">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
+    <body>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW2C490S7E"></script>
+    <script>
+       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LW2C490S7E');
+    </script>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+        <a href="games/games.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Games</a>
+        <a href="sites/sites.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sites</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="games/games.html" class="w3-bar-item w3-button w3-padding-large">Games</a>
+        <a href="sites/sites.html" class="w3-bar-item w3-button w3-padding-large">Sites</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+      </div>
+      
+    </div>
+    
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Q/A</h1>
+          <h5 class="w3-padding-32">Q: What is AlgebraHelper?<br>A: AlgebraHelper is a great way to use and play all of the most popular games and websites on the internet.</h5>
+          <h5 class="w3-padding-32">Q: How much does it cost to maintain the website?<br>A: I'm not going into specifics, but right now, not much. Later down the road it might start to cost more though.</h5>
+          <h5 class="w3-padding-32">Q: Can I use this at school or work?<br>A: I highly recommend that you do not use this as a way to play games at school, this is meant so that you can play all your games in one area. Use this tool with caution if you are breaking any rules of any kind set in place by your school or work.</h5>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+    </body>
+</html>
