@@ -45,41 +45,47 @@
     </div>
     
     <!-- Header -->
-    <header class="w3-container w3-black w3-center" style="padding:128px 16px">
-      <h1 class="w3-margin w3-jumbo">AlgebraHelper Beta v0.9</h1>
-      <p class="w3-xlarge">Best place to play your favorite games and apps.</p>
+    <header class="w3-container w3-white w3-center" style="padding:100px 16px">
+      <h1 class="w3-margin w3-jumbo">AlgebraHelper</h1>
+      <p class="w3-xlarge" id="quotes"></p>
+      <script>
+        const quotes = ["benny loves kenny <3", "been unblocking stuff since like last month", "dont get caught using this lol", "most of you guys using this are losers ngl", "happy new year"];
+        const randomnum = Math.floor(Math.random() * quotes.length);
+        console.log(quotes[randomnum]);
+        document.getElementById('quotes').textContent = quotes[randomnum]
+      </script>
     </header>
     
-    <!-- First Grid -->
     <div class="w3-row-padding w3-padding-64 w3-container">
       <div class="w3-content">
-        <div class="w3-twothird">
-          <h1>Featured Games</h1>
-          <a href="games/slope/index.html">Slope (working as of 12/15/21 8:38am)<br><br></a>
-          <a href="games/retrobowl/index.html">Retro Bowl<br><br></a>
-          <a href="games/run3/index.html">Run 3<br><br></a>
-        </div>
-    
-        <div class="w3-third w3-center">
-            <img src="assets/img/game_controller.png" alt="Game Controller"> 
+        <div class="w3-center">
+          <h1>Featured</h1>
         </div>
       </div>
     </div>
-
-        <!-- Second Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-twothird">
-          <h1>Changelog</h1>
-          <p>WE HIT 1K USERS!</p>
-          <p>Now using yet another version of Retro Bowl</p>
-          <p>Finally found a working Slope</p>
-          <p>Added a Physics game which is pretty sick actually</p>
-          <p>Fixed some proxy links</p>
-        </div>
-    
-      </div>
-    </div>
+    <div class="projects" id="projects-wrapper">
+      <a href="/games/slope" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/slope.jpg" class="thumbnail" /><span class="title">Slope</span><span class="open-directly"></span>
+        </a>
+      <a href="/games/retrobowl" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/retrobowl.png" class="thumbnail" /><span class="title">Retro Bowl</span><span class="open-directly"></span>
+        </a>
+      <a href="/games/physicsplayground" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/physicsplayground.png" class="thumbnail" /><span class="title">Physics Playground</span><span class="open-directly"></span>
+        </a>
+      <a href="https://a.securly.fail/go/https://open.spotify.com" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/spotify.png" class="thumbnail" /><span class="title">Spotify</span><span class="open-directly"></span>
+      <a href="/games/tetris" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/tetris.jpg" class="thumbnail" /><span class="title">Tetris</span><span class="open-directly"></span>
+        </a>
+      <a href="/games/run3/" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/run3.jpg" class="thumbnail" /><span class="title">Run 3</span><span class="open-directly"></span>
+        </a>
+      <a href="/games/rooftopsniper" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/rooftop-snipers.jpg" class="thumbnail" /><span class="title">Rooftop Snipers</span><span class="open-directly"></span>
+        </a>
+      <a href="/games/2048" class="project project-directory" aria-expanded="false">
+            <img src="/assets/img/2048.png" class="thumbnail" /><span class="title">2048</span><span class="open-directly"></span>
     
     <script>
     // Used to toggle the menu on small screens when clicking on the menu button
