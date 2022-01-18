@@ -12,6 +12,37 @@
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
     .fa-anchor,.fa-coffee {font-size:200px}
+    div#container
+{
+    width:770px;
+    height:615px;
+    overflow:hidden;     /* if you don't want a scrollbar, set to hidden */
+    overflow-x:hidden;   /* hides horizontal scrollbar on newer browsers */
+    position:relative;
+    top: 10%;
+    left: 29%;
+
+
+    /* resize and min-height are optional, allows user to resize viewable area */
+    -webkit-resize:vertical; 
+    -moz-resize:vertical;
+    resize:vertical;
+    min-height:317px;
+}
+
+iframe#embed
+{
+    width:1000px;       /* set this to approximate width of entire page you're embedding */
+    height:2000px;      /* determines where the bottom of the page cuts off */
+    margin-left:-115px; /* clipping left side of page */
+    margin-top:-150px;  /* clipping top of page */
+    overflow:hidden;
+
+    /* resize seems to inherit in at least Firefox */
+    -webkit-resize:none;
+    -moz-resize:none;
+    resize:none;
+}
     </style>
     <body scroll="no" style="overflow: hidden">
 
@@ -45,9 +76,11 @@
 	</div>
 </div>
 
-<h1 style="text-align:center; position:relative; top: 130px; left: 0px;">Rooftop Snipers</h1>
-<p style="text-align:center; position:relative; top: 140px; left: 0px;"><iframe src="https://3kh0.github.io/rooftop-snipers/" width="968" height="561" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" apple-mobile-web-app-capable="yes" apple-mobile-web-app-status-bar-style="black-translucent"></iframe></p>
-<h5 class="w3-padding-32" style="text-align:center; position:relative; top: 150px; left: 0px;">Disclaimer: You have to tap on the game before any of your keyboard actions register.</h5>   
+<h1 style="text-align:center; position:relative; top: 70px; left: 0px;">Duck Life</h1>
+<div id="container">
+    <iframe id="embed" src="https://virabot-aotic.herokuapp.com/g/df6962bc/duck-life-1"></iframe>
+</div>
+      
 
     <script>
     // Used to toggle the menu on small screens when clicking on the menu button
