@@ -251,7 +251,7 @@ html, body {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     margin: 0;
-     background-color: #000000;
+     background-color: #1a1a1a;
      color: rgba(255, 255, 255, 0.7);
      word-break: break-word;
 }
@@ -763,13 +763,6 @@ a.username:hover {
     background-image: url("/home-page/icons/checked.svg"), linear-gradient(150deg, #a8713e, #78402d);
 }
 .projects {
-    display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-     gap: 25px;
-     padding: 20px;
-     grid-auto-flow: dense;
-}
-.featured-projects {
     display: grid;
      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
      gap: 25px;

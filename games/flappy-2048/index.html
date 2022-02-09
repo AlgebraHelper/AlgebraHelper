@@ -1,100 +1,115 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Flappy 2048</title>
+<html lang="en">
+    <title>AlgebraHelper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AlgebraHelper | Best Free Games">
+    <meta property="og:description" content="AlgebraHelper is the best place to play all your favorite games and use all your favorite websites in one place! It works great in school too!">
+    <meta property="og:image" content="https://doc-0c-3s-docs.googleusercontent.com/docs/securesc/4dne2rjen0csr31p1584l2i1k1ag5nbo/88g3hml6gffr9uhm7i69fa489hqaq0gn/1644272775000/14952026732953682267/14952026732953682267/1UQsESk7MDQwRPxlUoBOqdoBMFjAEoH_b?authuser=0&nonce=satp07jq2lavu&user=14952026732953682267&hash=34smhdbsvv89k9hbvuo9fl3vtroog7la">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../assets/img/brokencalculator.png" type="image/x-icon">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 64px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .container {
+      height: 200px;
+      position: relative;
+      border: 3px solid black;
+    }
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .button1 {
+      background-color: black; 
+      color: white; 
+    }
+    .button1:hover {
+      background-color: black;
+      color: white;
+    }
+    #rcorners {
+      border-radius: 5%;
+      background: #88ff00;
+      padding: 20px;
+      width: 50%;
+      height: 50%;
+    }
+    </style>
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW2C490S7E"></script>
+    <script>
+       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW2C490S7E"></script>
-  <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'G-LW2C490S7E');
-  </script>
-</head>
-<body>
-  <div class="container">
-    <div class="heading">
-      <h1 class="title">Flappy 2048</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
-    </div>
-    <p class="game-intro">Jump through the tiles and get to <strong>2048!</strong></p>
+      gtag('config', 'G-LW2C490S7E');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2417935702588836"
+    crossorigin="anonymous"></script>
+    
+    <!-- Navbar -->
+<div class="w3-top">
+	<div class="w3-bar w3-black w3-card w3-left-align w3-large">
+	  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+	  <a href="/" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+	  <a href="/games" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Games</a>
+	  <a href="/sites" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sites</a>
+    <a href="/chat" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Chat</a>
+	  <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
+	</div>
+  
+	<!-- Navbar on small screens -->
+	<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+	  <a href="/games" class="w3-bar-item w3-button w3-padding-large">Games</a>
+	  <a href="/sites" class="w3-bar-item w3-button w3-padding-large">Sites</a>
+    <a href="/chat" class="w3-bar-item w3-button w3-padding-large">Chat</a>
+	  <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
+	</div>
+</div>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
-        </div>
-      </div>
+<h1 style="text-align:center; position:relative; top: 10%; left: 0%;">Flappy 2048</h1>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="tile tile-block-a"><div class="tile-inner"></div></div>
-        <div class="tile tile-block-b"><div class="tile-inner"></div></div>
-        <div class="tile tile-block-c"><div class="tile-inner"></div></div>
-        <div class="tile tile-block-d"><div class="tile-inner"></div></div>
-        <div class="tile tile-bird"><div class="tile-inner"></div></div>
-      </div>
-    </div>
+<p id="rcorners" style="width: 50%; height: 50%; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"><form action="play/"><button class="button button1" style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">Play Now ▶</button></form></p>
 
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Press <strong>any key</strong> to move the tile. When the tile go through a barrier, you get <strong>score!</strong>
-    </p>
-    <hr>
-    <p>
-    Created by <a href="http://github.com/hczhcz" target="_blank">hcz.</a> Based on <a href="http://gabrielecirulli.com" target="_blank">2048 by Gabriele Cirulli</a> and <a href="http://en.wikipedia.org/wiki/Flappy_Bird" target="_blank">Flappy Bird by Dong Nguyen.</a>
-    </p>
-    <hr>
-    <p>More 2048 games:</p>
-    <p><a href="https://hczhcz.github.io/Racing-2048">Racing 2048</a>, <a href="https://hczhcz.github.io/2048">Upside down</a>, <a href="https://hczhcz.github.io/2048/2047">Role reversal</a>, <a href="https://hczhcz.github.io/2048/20ez">Easy ver</a>, <a href="https://hczhcz.github.io/2048/20mu">喵 ver</a>, <a href="https://hczhcz.github.io/my-2048">Customizable 2048</a></p>
-  </div>
+<h1 style="text-align:center; position:relative; top: 70%; left: 0%;">Instructions/Compatibility:</h1>
+<p style="text-align:center; position:relative; top: 70%; left: 0%;">WORKS ON MOBILE!</p>
 
-  <a href="https://github.com/hczhcz/Flappy-2048"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+<a href="https://discord.gg/3zR2SzVz6W"><img src="../../assets/img/discordinvite.png" style="width: 434px; height: 110px; margin: 0; position: absolute; top: 105%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 2%;"></img></a>
 
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_score_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-</body>
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+    </body>
+  </head>
 </html>
