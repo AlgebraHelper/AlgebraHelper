@@ -2,5 +2,5 @@
 https://algebrahelper.live
 https://algebrahelper.ml
 https://algebrahelper.net
-https://englishhelper.tech
+http://englishhelper.tech
 https://learnhistory.me
