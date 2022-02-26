@@ -23,6 +23,39 @@
     .footer-distributed .footer-right{float: right;margin-top: 6px;max-width: 180px;}
     .footer-distributed .footer-right a{display: inline-block;width: 35px;height: 35px;background-color:  #33383b;border-radius: 2px;font-size: 20px;color: #ffffff;text-align: center;line-height: 35px;margin-left: 3px;}
     </style>
+    <style>
+      /* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #1a1a1a;
+  padding-left: 30%;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab button:hover {
+  color: #000;
+  background-color: #ffffff;
+}
+.tab button.active {
+  color: #000;
+  background-color: #ffffff;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+.content {
+  text-align: center;
+}
+    </style>
     <body>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,19 +90,36 @@
       </div>
       
     </div>
+    <div class="content">
+<h1>Games</h1>
 
-<div class="projects" id="projects-wrapper">
-  <a href="/games/html5/" class="project project-directory" aria-expanded="false">
-        <img src="/assets/img/html5.png" class="thumbnail" /><span class="title">HTML5 Games</span><span class="open-directly"></span>
-    </a>
-  <a href="/games/flash/" class="project project-directory" aria-expanded="false">
-        <img src="/assets/img/flash.png" class="thumbnail" /><span class="title">Flash Games</span><span class="open-directly"></span>
-    </a>
-    <a href="/games/emulator/" class="project project-directory" aria-expanded="false">
-        <img src="/assets/img/emulator.png" class="thumbnail" /><span class="title">Retro Games</span><span class="open-directly"></span>
-    </a>
+<div class="tab">
+  <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'ALL')">All</button>
+  <button class="tablinks" onclick="openTab(event, 'HTML5')">Web Games</button>
+  <button class="tablinks" onclick="openTab(event, 'FLASH')">Flash Games</button>
+  <button class="tablinks" onclick="openTab(event, 'EMULATED')">Retro Games</button>
 </div>
 
+<div id="ALL" class="tabcontent">
+  <div class="all-projects projects" id="projects-wrapper">
+  </div>
+</div>
+
+<div id="HTML5" class="tabcontent">
+  <div class="html-projects projects" id="projects-wrapper">
+  </div>
+</div>
+
+<div id="FLASH" class="tabcontent">
+  <div class="flash-projects projects" id="projects-wrapper">
+  </div>
+</div>
+
+<div id="EMULATED" class="tabcontent">
+  <div class="emulator-projects projects" id="projects-wrapper">
+  </div>
+</div>
+</div>
 <footer class="footer-distributed">
 
   <div class="footer-right">
@@ -103,6 +153,161 @@
 </footer>
 
 <script src="https://kit.fontawesome.com/b53d10e9df.js" crossorigin="anonymous"></script>
+<script>
+  document.getElementById("defaultOpen").click();
+  function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+function isHTML5(game) {
+  return game.type==="html5"
+}
+function isFLASH(game) {
+  return game.type==="flash"
+}
+function isEMULATOR(game) {
+  return game.type==="emulator"
+}
+function loadHtml() {
+    let htmlDiv = document.getElementsByClassName("html-projects")[0]
+        html5games.forEach((game)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+game.type+"/"+game.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            htmlDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+game.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = game.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+}
+function loadFlash() {
+    let flashDiv = document.getElementsByClassName("flash-projects")[0]
+        flashgames.forEach((game)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+game.type+"/"+game.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            flashDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+game.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = game.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+}
+function loadEmulator() {
+    let emulatorDiv = document.getElementsByClassName("emulator-projects")[0]
+        emulatorgames.forEach((game)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+game.type+"/"+game.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            emulatorDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+game.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = game.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+    
+}
+function loadAll() {
+    let allDiv = document.getElementsByClassName("all-projects")[0]
+        games.forEach((game)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+game.type+"/"+game.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            allDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+game.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = game.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+}
+window.addEventListener("load",(e)=>{
+    games = []
+    html5games = []
+    flashgames = []
+    emulatorgames = []
+    fetch("./games.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(data => games=data).then(()=>{
+        console.log(games)
+        html5games = games.filter(isHTML5)
+        flashgames = games.filter(isFLASH)
+        emulatorgames = games.filter(isEMULATOR)
+    }).then(()=>{
+        let allDiv = document.getElementsByClassName("all-projects")[0]
+        games.forEach((game)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+game.type+"/"+game.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            allDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+game.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = game.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+        loadFlash();
+        loadEmulator();
+        loadHtml();
+    })
+});
+</script>
 </body>
 </html>
