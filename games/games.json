@@ -42,6 +42,12 @@
         "iconURL": "https://www.learnhistory.me/assets/img/btd2.jpg"
     },
     {
+        "name": "Bloons TD 4",
+        "id": "bloonstd4",
+        "type": "html5",
+        "iconURL": "https://www.learnhistory.me/assets/img/btd4.jpg"
+    },
+    {
         "name": "Bloxors",
         "id": "bloxors",
         "type": "flash",
@@ -122,7 +128,7 @@
     {
         "name": "Donkey Kong",
         "id": "donkeykong",
-        "type": "html5",
+        "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/donkeykong.png"
     },
     {
@@ -140,7 +146,7 @@
     {
         "name": "Dr. Mario",
         "id": "drmario",
-        "type": "html5",
+        "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/drmario.png"
     },
     {
@@ -276,10 +282,22 @@
         "iconURL": "https://www.learnhistory.me/assets/img/impossiblequiz2.jpeg"
     },
     {
-        "name": "Mario Kart",
-        "id": "mariokart",
+        "name": "Mario Kart 64",
+        "id": "mk64",
         "type": "emulator",
-        "iconURL": "https://www.learnhistory.me/assets/img/mariokart.png"
+        "iconURL": "https://www.learnhistory.me/assets/img/mk64.png"
+    },
+    {
+        "name": "Mario Kart DS",
+        "id": "mkds",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/mkds.jpg"
+    },
+    {
+        "name": "Mario Kart Super Circuit",
+        "id": "mksc",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/mksc.jpg"
     },
     {
         "name": "Moto X3M",
@@ -348,6 +366,24 @@
         "iconURL": "https://www.learnhistory.me/assets/img/slope.jpg"
     },
     {
+        "name": "Super Mario 64",
+        "id": "sm64",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/sm64.jpg"
+    },
+    {
+        "name": "Super Mario Bros.",
+        "id": "smb",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/smb.png"
+    },
+    {
+        "name": "Super Mario Bros. 3",
+        "id": "smb3",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/smb3.png"
+    },
+    {
         "name": "Space Invaders",
         "id": "spaceinvaders",
         "type": "html5",
@@ -370,6 +406,12 @@
         "id": "tetris",
         "type": "html5",
         "iconURL": "https://www.learnhistory.me/assets/img/tetris.jpg"
+    },
+    {
+        "name": "Tetris Worlds",
+        "id": "tetrisworlds",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/tetrisworlds.jpg"
     },
     {
         "name": "Vex 3",

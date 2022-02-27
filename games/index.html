@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AlgebraHelper | Best Free Games">
-    <meta property="og:description" content="AlgebraHelper is the best place to play all your favorite games and use all your favorite websites in one place! It works great in school too!">
-    <meta property="og:image" content="https://doc-0c-3s-docs.googleusercontent.com/docs/securesc/4dne2rjen0csr31p1584l2i1k1ag5nbo/88g3hml6gffr9uhm7i69fa489hqaq0gn/1644272775000/14952026732953682267/14952026732953682267/1UQsESk7MDQwRPxlUoBOqdoBMFjAEoH_b?authuser=0&nonce=satp07jq2lavu&user=14952026732953682267&hash=34smhdbsvv89k9hbvuo9fl3vtroog7la">
+    
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -30,8 +29,6 @@
   background-color: #1a1a1a;
   padding-left: 30%;
 }
-
-/* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   float: left;
@@ -41,20 +38,14 @@
   padding: 14px 16px;
   transition: 0.3s;
 }
-
-/* Change background color of buttons on hover */
 .tab button:hover {
   color: #000;
   background-color: #ffffff;
 }
-
-/* Create an active/current tablink class */
 .tab button.active {
   color: #000;
   background-color: #ffffff;
 }
-
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -67,13 +58,14 @@
     <body>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW2C490S7E"></script>
-    <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-       gtag('config', 'G-LW2C490S7E');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LDZFF61JD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5LDZFF61JD');
+</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2417935702588836"
     crossorigin="anonymous"></script>
       <br></br>
@@ -100,7 +92,7 @@
     </div>
     <div class="content">
 <h1>Games</h1>
-<!-- Tab links -->
+
 <div class="tab">
   <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'ALL')">All</button>
   <button class="tablinks" onclick="openTab(event, 'HTML5')">Web Games</button>
@@ -108,7 +100,6 @@
   <button class="tablinks" onclick="openTab(event, 'EMULATED')">Retro Games</button>
 </div>
 
-<!-- Tab content -->
 <div id="ALL" class="tabcontent">
   <div class="all-projects projects" id="projects-wrapper">
   </div>
@@ -128,6 +119,7 @@
   <div class="emulator-projects projects" id="projects-wrapper">
   </div>
 </div>
+      
 </div>
 <footer class="footer-distributed">
 
@@ -195,7 +187,7 @@ function isEMULATOR(game) {
 }
 function loadHtml() {
     let htmlDiv = document.getElementsByClassName("html-projects")[0]
-        flashgames.forEach((game)=>{
+        html5games.forEach((game)=>{
             let aElement = document.createElement("a");
             aElement.href="/games/"+game.type+"/"+game.id+"/";
             aElement.classList = "project project-directory";
