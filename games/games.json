@@ -128,7 +128,7 @@
     {
         "name": "Donkey Kong",
         "id": "donkeykong",
-        "type": "html5",
+        "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/donkeykong.png"
     },
     {
@@ -146,7 +146,7 @@
     {
         "name": "Dr. Mario",
         "id": "drmario",
-        "type": "html5",
+        "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/drmario.png"
     },
     {
@@ -381,7 +381,7 @@
         "name": "Super Mario Bros. 3",
         "id": "smb3",
         "type": "emulator",
-        "iconURL": "https://www.learnhistory.me/assets/img/smb3.jpg"
+        "iconURL": "https://www.learnhistory.me/assets/img/smb3.png"
     },
     {
         "name": "Space Invaders",
