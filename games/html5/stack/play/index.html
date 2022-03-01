@@ -1,23 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-    <title>AlgebraHelper</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/assets/img/brokencalculator.png" type="image/x-icon">
-    <body scroll="no" style="overflow: hidden">
-    
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LDZFF61JD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html>
+<head>
+	<title>Rainbow Stacker</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<!-- Use this metatag when Apple fixes their IOS 9
+	<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
+	-->
 
-  gtag('config', 'G-5LDZFF61JD');
-</script>
-    </script>
+	<!--Temporary fix for IOS 9-->
+	<meta name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no, minimal-ui"/>
 
-<iframe src="http://mgamesnpnc.mobimedia.com.au/serve?portal_id=5712275335806976&game_id=5409427125436416&branding_id=5762959707996160&ad_id=5310228010631168&portal_localization_id=5717118716739584&id=" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0%;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>
-    </body>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet" type="text/css" href="game.css">
+
+	<script type="text/javascript" src="game.js"></script>
+<!-- AnalyticsCode -->
+
+<!-- APICode -->
+</head>
+
+<div class="gamecenter-activator"></div>
+
+<body onload="setTimeout(function(){window.scrollTo(0,1)},1);">
+<!--body-->
+
+
+	<div id="ajaxbar">
+		<div id="game"><canvas id="canvas"></canvas></div>
+	    <div id="webgl"><canvas id="webglcanvas"></canvas></div>
+
+		<div id="orientate"><img src="media/graphics/orientate/landscape.jpg" /></div>
+		<div id="play" class="play" onclick=""><img src="media/graphics/splash/mobile/cover-start.jpg" /></div>
+		<!--<img id="scrollDown" width="220" height="277"></img>-->
+
+
+	</div>
+	<!-- <div id="tempdiv"><br><br><br></div> -->
+<!-- APICode2 -->
+
+
+<!-- END OF TEST -->
+
+</body>
 </html>
