@@ -48,8 +48,8 @@
         "iconURL": "https://www.learnhistory.me/assets/img/btd4.jpg"
     },
     {
-        "name": "Bloxors",
-        "id": "bloxors",
+        "name": "Bloxorz",
+        "id": "bloxorz",
         "type": "flash",
         "iconURL": "https://www.learnhistory.me/assets/img/bloxorz.png"
     },
@@ -270,18 +270,6 @@
         "iconURL": "https://www.learnhistory.me/assets/img/icypurplehead3.png"
     },
     {
-        "name": "The Impossible Quiz",
-        "id": "impossiblequiz",
-        "type": "flash",
-        "iconURL": "https://www.learnhistory.me/assets/img/impossiblequiz.png"
-    },
-    {
-        "name": "The Impossible Quiz 2",
-        "id": "impossiblequiz2",
-        "type": "flash",
-        "iconURL": "https://www.learnhistory.me/assets/img/impossiblequiz2.jpeg"
-    },
-    {
         "name": "Mario Kart 64",
         "id": "mk64",
         "type": "emulator",
@@ -298,6 +286,12 @@
         "id": "mksc",
         "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/mksc.jpg"
+    },
+    {
+        "name": "Minecraft",
+        "id": "minecraft",
+        "type": "html5",
+        "iconURL": "https://www.learnhistory.me/assets/img/minecraft.png"
     },
     {
         "name": "Moto X3M",
@@ -412,6 +406,24 @@
         "id": "tetrisworlds",
         "type": "emulator",
         "iconURL": "https://www.learnhistory.me/assets/img/tetrisworlds.jpg"
+    },
+    {
+        "name": "The Impossible Quiz",
+        "id": "impossiblequiz",
+        "type": "flash",
+        "iconURL": "https://www.learnhistory.me/assets/img/impossiblequiz.png"
+    },
+    {
+        "name": "The Impossible Quiz 2",
+        "id": "impossiblequiz2",
+        "type": "flash",
+        "iconURL": "https://www.learnhistory.me/assets/img/impossiblequiz2.jpeg"
+    },
+    {
+        "name": "Upload ROM",
+        "id": "upload",
+        "type": "emulator",
+        "iconURL": "https://www.learnhistory.me/assets/img/emulatorlogo.png"
     },
     {
         "name": "Vex 3",
