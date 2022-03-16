@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:type" content="website">
     <meta property="og:title" content="AlgebraHelper | Best Free Games">
-    
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -56,6 +57,28 @@
 .content {
   text-align: center;
 }
+.search {
+    background: none;
+    font-family: inherit;
+    padding: 0px 17px;
+    height: 48px;
+    border: 1px solid rgb(255, 255, 255, .2);
+    color: var(--text-color);
+    border-radius: 3px;
+    outline: none;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 50px;
+    color: #FFF;
+}
+
+.search:focus {
+    border: 1px solid rgba(253, 253, 253, 0.514);
+    border-radius: 6px;
+    animation: fadeInAnimation ease-in-out 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
     </style>
     <body>
     
@@ -100,6 +123,7 @@
   <button class="tablinks" onclick="openTab(event, 'HTML5')">Web Games</button>
   <button class="tablinks" onclick="openTab(event, 'FLASH')">Flash Games</button>
   <button class="tablinks" onclick="openTab(event, 'EMULATED')">Retro Games</button>
+  <button class="tablinks" onclick="openTab(event, 'SEARCH')">Search Games</button>
 </div>
 
 <div id="ALL" class="tabcontent">
@@ -121,7 +145,11 @@
   <div class="emulator-projects projects" id="projects-wrapper">
   </div>
 </div>
-      
+<div id="SEARCH" class="tabcontent">
+  <input class="search" placeholder="Search the games!">
+  <div class="search-projects projects" id="projects-wrapper">
+  </div>
+</div>
 </div>
 <footer class="footer-distributed">
 
@@ -186,6 +214,50 @@ function isFLASH(game) {
 }
 function isEMULATOR(game) {
   return game.type==="emulator"
+}
+function loadSearch(el){
+  //console.log("e")
+  fetch("./games.json")
+    .then(response => {return response.json()})
+    .then((games)=>{
+      const options = {
+        keys: [
+          "name",
+          "id"
+        ]
+      };
+      
+      const fuse = new Fuse(games, options);
+      
+      // Change the pattern
+      const pattern = el.value;
+      //console.log(pattern)
+      const filtered = fuse.search(pattern)
+      //console.log(filtered)
+      let searchDiv = document.getElementsByClassName("search-projects")[0]
+      searchDiv.innerHTML="";
+        filtered.forEach((game)=>{
+          let egame = game.item
+            let aElement = document.createElement("a");
+            aElement.href="/games/"+egame.type+"/"+egame.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            searchDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+egame.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = egame.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+    });
+        
+  
 }
 function loadHtml() {
     let htmlDiv = document.getElementsByClassName("html-projects")[0]
@@ -282,7 +354,7 @@ window.addEventListener("load",(e)=>{
         return response.json();
     })
     .then(data => games=data).then(()=>{
-        console.log(games)
+        //console.log(games)
         html5games = games.filter(isHTML5)
         flashgames = games.filter(isFLASH)
         emulatorgames = games.filter(isEMULATOR)
@@ -309,6 +381,11 @@ window.addEventListener("load",(e)=>{
         loadFlash();
         loadEmulator();
         loadHtml();
+        loadSearch(document.getElementsByClassName("search")[0]);
+        document.getElementsByClassName("search")[0].addEventListener("keypress",(e)=>{
+          //console.log(e)
+          loadSearch(e.target)
+        })
     })
 });
 </script>
