@@ -71,7 +71,9 @@
     </div>
     <div class="content">
 <h1>Sites</h1>
-
+<div class="all-projects projects" id="projects-wrapper">
+  
+</div>
 
 <footer class="footer-distributed">
 
@@ -105,5 +107,37 @@
 
 </footer>
 <script src="https://kit.fontawesome.com/b53d10e9df.js" crossorigin="anonymous"></script>
+<script>
+window.addEventListener("load",(e)=>{
+    site = []
+    fetch("/sites/sites.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(data => sites=data).then(()=>{
+        console.log(sites)
+    }).then(()=>{
+        let allDiv = document.getElementsByClassName("all-projects")[0]
+        sites.forEach((site)=>{
+            let aElement = document.createElement("a");
+            aElement.href="/sites/"+site.id+"/";
+            aElement.classList = "project project-directory";
+            aElement.setAttribute("aria-expanded", false);
+            allDiv.appendChild(aElement);
+            let imgElement = document.createElement("img");
+            imgElement.src = "/assets/img/"+site.iconURL.split("/")[5];
+            imgElement.classList = "thumbnail";
+            aElement.appendChild(imgElement);
+            let nameElement = document.createElement("span");
+            nameElement.classList = "title";
+            nameElement.innerText = site.name;
+            aElement.appendChild(nameElement);
+            let openDirectly = document.createElement("span");
+            openDirectly.classList = "open-directly";
+            aElement.appendChild(openDirectly);
+        })
+    })
+});
+</script>
 </body>
 </html>

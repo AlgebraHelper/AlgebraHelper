@@ -112,7 +112,7 @@ window.addEventListener("load",()=>{
   computerNav.appendChild(sitesButton);
   computerNav.appendChild(chatButton);
   computerNav.appendChild(aboutButton);
-  if (window.location.pathname.slice(0,14)!="/games/search/"){
+  if (window.location.pathname.slice(0,8)!="/search/"){
     computerNav.appendChild(searchContainer);
   } else{
     let searchBox = document.getElementById("search-box");
@@ -139,6 +139,9 @@ window.addEventListener("load",()=>{
     case "about":
       aboutButton.setAttribute("class","w3-bar-item w3-button w3-padding-large w3-white");
       break;
+    case "search":
+      //nothing because crafted dont want anything highlighted
+      break;
     default:
       //stuff
       console.log('uhhh something wrong with navbar! path: '+window.location.pathname);
@@ -149,7 +152,7 @@ function searchHandler(el) {
   el.preventDefault();
   console.log(el);
   let searchTerm = el.srcElement[0].value;
-  window.location.assign("/games/search/?q="+encodeURI(searchTerm));
+  window.location.assign("/search/?q="+encodeURI(searchTerm));
 }
 
 function myFunction() {

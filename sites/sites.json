@@ -3,5 +3,20 @@
         "name": "YouTube",
         "id": "youtube",
         "iconURL": "https://www.algebrahelper.net/assets/img/youtube.png"
+    },
+    {
+        "name": "Twitter",
+        "id": "twitter",
+        "iconURL": "https://www.algebrahelper.net/assets/img/twitter.png"
+    },
+    {
+        "name": "Reddit",
+        "id": "reddit",
+        "iconURL": "https://www.algebrahelper.net/assets/img/reddit.jpg"
+    },
+    {
+        "name": "Spotify",
+        "id": "spotify",
+        "iconURL": "https://www.algebrahelper.net/assets/img/spotify.png"
     }
 ]
