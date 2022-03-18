@@ -33,24 +33,7 @@
     </script>
 
     <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-        <a href="/games" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Games</a>
-        <a href="/sites" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sites</a>
-        <a href="/chat" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Chat</a>
-        <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About</a>
-      </div>
-
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="/games" class="w3-bar-item w3-button w3-padding-large">Games</a>
-        <a href="/sites" class="w3-bar-item w3-button w3-padding-large">Sites</a>
-        <a href="/chat" class="w3-bar-item w3-button w3-padding-large">Chat</a>
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-      </div>
-      
+    <div id="navbar">
     </div>
     
     <div style = "position:relative; left:5px; top:50px;">
@@ -69,14 +52,14 @@
             <li>AlgebraHelper needs to comply with the law</li>
         </ul>
           
-        <p>AlgebraHelper will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p> 
+        <p>AlgebraHelper will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p>
         
         <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.</p>
         
         <p>In certain circumstances, you have the following data protection rights:</p>
         <ul>
             <li>The right to access, update or to delete the information we have on you.</li>
-            <li>The right of rectification.</li> 
+            <li>The right of rectification.</li>
             <li>The right to object.</li>
             <li>The right of restriction.</li>
             <li>The right to data portability</li>
@@ -167,7 +150,7 @@
       var x = document.getElementById("navDemo");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-      } else { 
+      } else {
         x.className = x.className.replace(" w3-show", "");
       }
     }
