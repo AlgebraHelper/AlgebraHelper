@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AlgebraHelper | Best Free Sites">
-    
+    <meta property="og:title" content="AlgebraHelper">
+    <script src="/assets/lib/fuse/fuse.js"></script>
+    <script src="/assets/lib/include/navbar.js"></script>
+    <link rel="stylesheet" href="/assets/lib/include/navbar.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -21,6 +23,33 @@
     .footer-distributed p.footer-links a{display:inline-block;line-height: 1.8;text-decoration: none;color:  inherit;}
     .footer-distributed .footer-right{float: right;margin-top: 6px;max-width: 180px;}
     .footer-distributed .footer-right a{display: inline-block;width: 35px;height: 35px;background-color:  #33383b;border-radius: 2px;font-size: 20px;color: #ffffff;text-align: center;line-height: 35px;margin-left: 3px;}
+    </style>
+    <style>
+.content {
+  text-align: center;
+}
+.search {
+    background: none;
+    font-family: inherit;
+    padding: 0px 17px;
+    height: 48px;
+    border: 1px solid rgb(255, 255, 255, .2);
+    color: var(--text-color);
+    border-radius: 3px;
+    outline: none;
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 50px;
+    color: #FFF;
+}
+
+.search:focus {
+    border: 1px solid rgba(253, 253, 253, 0.514);
+    border-radius: 6px;
+    animation: fadeInAnimation ease-in-out 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
     </style>
     <body>
     
@@ -38,46 +67,13 @@
       <br></br>
       <br></br>
 <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-black w3-card w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-        <a href="/games" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Games</a>
-        <a href="/sites" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Sites</a>
-        <a href="/chat" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Chat</a>
-        <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
-      </div>
-
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="/games" class="w3-bar-item w3-button w3-padding-large">Games</a>
-        <a href="/sites" class="w3-bar-item w3-button w3-padding-large">Sites</a>
-        <a href="/chat" class="w3-bar-item w3-button w3-padding-large">Chat</a>
-        <a href="/about" class="w3-bar-item w3-button w3-padding-large">About</a>
-      </div>
-      
+    <div id="navbar">
     </div>
+    <div class="content">
+<h1>Proxy</h1>
 
-<a href="search/"><img src="/assets/img/searchbar.png" style="width: 561px; height: 74px; display: block; margin-left: auto; margin-right: auto;"></img></a>
-
-<p><br></p>
-
-<div class="projects" id="projects-wrapper">
-  <a href="youtube/" class="project project-directory" aria-expanded="false">
-      <img src="/assets/img/youtube.png" class="thumbnail" /><span class="title">YouTube</span><span class="open-directly"></span>
-    </a>
-  <a href="spotify/" class="project project-directory" aria-expanded="false">
-      <img src="/assets/img/spotify.png" class="thumbnail" /><span class="title">Spotify</span><span class="open-directly"></span>
-    </a>
-  <a href="twitter/" class="project project-directory" aria-expanded="false">
-      <img src="/assets/img/twitter.png" class="thumbnail" /><span class="title">Twitter</span><span class="open-directly"></span>
-    </a>
-  <a href="reddit/" class="project project-directory" aria-expanded="false">
-      <img src="/assets/img/reddit.jpg" class="thumbnail" /><span class="title">Reddit</span><span class="open-directly"></span>
-    </a> 
-</div>
-
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<a href="https://cdn.mathfacts.ga"><img src="/assets/img/searchbar.png" style="width: 561px; height: 74px; display: block; margin-left: auto; margin-right: auto;"></img></a>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 <footer class="footer-distributed">
 
@@ -91,11 +87,11 @@
   <div class="footer-left">
 
     <p class="footer-links">
-      <a href="../">Home</a>
+      <a href="/">Home</a>
       ·
       <a href="../games/">Games</a>
       ·
-      <a href="#">Sites</a>
+      <a href="../sites/">Sites</a>
       ·
       <a href="../chat/">Chat</a>
       ·
@@ -110,5 +106,6 @@
   </div>
 
 </footer>
-
 <script src="https://kit.fontawesome.com/b53d10e9df.js" crossorigin="anonymous"></script>
+</body>
+</html>
