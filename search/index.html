@@ -145,53 +145,40 @@ function loadSearch(el){
   fetch("/games/games.json")
     .then(response => {return response.json()})
     .then((games)=>{
-      fetch("/sites/sites.json")
-        .then(response => {return response.json()})
-        .then((sites)=>{
-          const options = {
-            keys: [
-              "name",
-              "id"
-            ]
-          };
-          const fused = games.concat(sites);
-          console.log(fused)
-          const fuse = new Fuse(fused, options);
+      const options = {
+        keys: [
+          "name",
+          "id"
+        ]
+      };
+      const fuse = new Fuse(games, options);
+      
+      // Change the pattern
+      const pattern = el.value;
+      //console.log(pattern)
+      const filtered = fuse.search(pattern)
+      console.log(filtered)
+      //console.log(filtered)
+      let searchDiv = document.getElementsByClassName("search-projects")[0]
+      searchDiv.innerHTML="";
+      filtered.forEach((game)=>{
+        let egame = game.item
+          let aElement = document.createElement("a");
           
-          // Change the pattern
-          const pattern = el.value;
-          //console.log(pattern)
-          const filtered = fuse.search(pattern)
-          console.log(filtered)
-          //console.log(filtered)
-          let searchDiv = document.getElementsByClassName("search-projects")[0]
-          searchDiv.innerHTML="";
-          filtered.forEach((game)=>{
-            let egame = game.item
-              let aElement = document.createElement("a");
-              if (!egame.type) {
-                aElement.href="/sites/"+egame.id+"/";
-              } else {
-                aElement.href="/games/"+egame.type+"/"+egame.id+"/";
-              }
-              
-              aElement.classList = "project project-directory";
-              aElement.setAttribute("aria-expanded", false);
-              searchDiv.appendChild(aElement);
-              let imgElement = document.createElement("img");
-              imgElement.src = "/assets/img/"+egame.iconURL.split("/")[5];
-              imgElement.classList = "thumbnail";
-              aElement.appendChild(imgElement);
-              let nameElement = document.createElement("span");
-              nameElement.classList = "title";
-              nameElement.innerText = egame.name;
-              aElement.appendChild(nameElement);
-              let openDirectly = document.createElement("span");
-              openDirectly.classList = "open-directly";
-              aElement.appendChild(openDirectly);
-          });
+          aElement.href="/games/"+egame.type+"/"+egame.id+"/";          
+          aElement.classList = "project project-directory";
+          aElement.setAttribute("aria-expanded", false);
+          searchDiv.appendChild(aElement);
+          let imgElement = document.createElement("img");
+          imgElement.src = "/assets/img/"+egame.iconURL.split("/")[5];
+          imgElement.classList = "thumbnail";
+          aElement.appendChild(imgElement);
+          let nameElement = document.createElement("span");
+          nameElement.classList = "title";
+          nameElement.innerText = egame.name;
+          aElement.appendChild(nameElement);
       });
-    });
+  });
 }
 window.addEventListener("load",(e)=>{
   loadSearch(document.getElementById("search-box"));
