@@ -444,6 +444,12 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/vex5.jpg"
     },
     {
+        "name": "Wordle Unlimited",
+        "id": "wordle",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/wordle.png"
+    },
+    {
         "name": "World's Hardest Game",
         "id": "worldshardestgame",
         "type": "flash",
