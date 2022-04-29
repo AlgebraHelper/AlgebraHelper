@@ -66,6 +66,12 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/breakout.jpg"
     },
     {
+        "name": "Cannon Basketball 4",
+        "id": "cannon-basketball-4",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/cannon-basketball-4.png"
+    },
+    {
         "name": "Chess",
         "id": "chess",
         "type": "html5",
@@ -102,18 +108,6 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/cuttherope.png"
     },
     {
-        "name": "Cut the Rope Holiday",
-        "id": "cuttheropeholiday",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/cuttheropeholiday.png"
-    },
-    {
-        "name": "Cut the Rope Time Travel",
-        "id": "cuttheropetimetravel",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/cuttheropetimetravel.png"
-    },
-    {
         "name": "Chrome Dino",
         "id": "dinosaur",
         "type": "html5",
@@ -130,12 +124,6 @@
         "id": "doctor-acorn3",
         "type": "html5",
         "iconURL": "https://www.algebrahelper.net/assets/img/doctor-acorn3.png"
-    },
-    {
-        "name": "Doge 2048",
-        "id": "doge2048",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/doge2048.jpeg"
     },
     {
         "name": "Doge Miner",
@@ -276,6 +264,12 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/GeometryDashLogo.PNG"
     },
     {
+        "name": "Getaway Shootout",
+        "id": "getaway-shootout",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/getaway-shootout.jpg"
+    },
+    {
         "name": "Icy Purple Head 2",
         "id": "icypurplehead2",
         "type": "html5",
@@ -306,10 +300,10 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/mksc.jpg"
     },
     {
-        "name": "Mario Party",
-        "id": "marioparty",
-        "type": "emulator",
-        "iconURL": "https://www.algebrahelper.net/assets/img/marioparty.jpg"
+        "name": "Minecraft",
+        "id": "minecraft",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/minecraft.png"
     },
     {
         "name": "Moto X3M",
@@ -378,12 +372,6 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/slope.jpg"
     },
     {
-        "name": "Snake",
-        "id": "snake",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/snake.png"
-    },
-    {
         "name": "Super Mario 64",
         "id": "sm64",
         "type": "emulator",
@@ -414,22 +402,10 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/stack.png"
     },
     {
-        "name": "Stack Tower",
-        "id": "stacktower",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/stacktower.jpg"
-    },
-    {
         "name": "Surviv.io",
         "id": "surivio",
         "type": "html5",
         "iconURL": "https://www.algebrahelper.net/assets/img/survivio.png"
-    },
-    {
-        "name": "Temple Run",
-        "id": "templerun",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/templerun.png"
     },
     {
         "name": "Tetris",
@@ -444,6 +420,12 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/tetrisworlds.jpg"
     },
     {
+        "name": "There Is No Game",
+        "id": "there-is-no-game",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/there-is-no-game.png"
+    },
+    {
         "name": "The Impossible Quiz",
         "id": "impossiblequiz",
         "type": "flash",
@@ -454,6 +436,12 @@
         "id": "impossiblequiz2",
         "type": "flash",
         "iconURL": "https://www.algebrahelper.net/assets/img/impossiblequiz2.jpeg"
+    },
+    {
+        "name": "Tube Jumpers",
+        "id": "tube-jumpers",
+        "type": "html5",
+        "iconURL": "https://www.algebrahelper.net/assets/img/tube-jumpers.jpg"
     },
     {
         "name": "Upload ROM",
