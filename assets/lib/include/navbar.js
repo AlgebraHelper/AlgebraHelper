@@ -110,7 +110,6 @@ window.addEventListener("load",()=>{
   computerNav.appendChild(homeButton);
   computerNav.appendChild(gamesButton);
   computerNav.appendChild(sitesButton);
-  computerNav.appendChild(chatButton);
   computerNav.appendChild(aboutButton);
   if (window.location.pathname.slice(0,8)!="/search/"){
     computerNav.appendChild(searchContainer);
@@ -122,7 +121,6 @@ window.addEventListener("load",()=>{
   navbarContainer.appendChild(mobileNav);
   mobileNav.appendChild(MgamesButton);
   mobileNav.appendChild(MsitesButton);
-  mobileNav.appendChild(MchatButton);
   mobileNav.appendChild(MaboutButton);
   
   switch (window.location.pathname.split("/")[1]) {
