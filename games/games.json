@@ -300,12 +300,6 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/mksc.jpg"
     },
     {
-        "name": "Minecraft",
-        "id": "minecraft",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/minecraft.png"
-    },
-    {
         "name": "Moto X3M",
         "id": "motox3m",
         "type": "html5",
