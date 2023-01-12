@@ -96,12 +96,6 @@
         "iconURL": "https://www.algebrahelper.net/assets/img/crossyroad.jpg"
     },
     {
-        "name": "Cubefield",
-        "id": "Cubefield",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/cubefield.jpg"
-    },
-    {
         "name": "Cut the Rope",
         "id": "cuttherope",
         "type": "html5",
@@ -394,12 +388,6 @@
         "id": "stack",
         "type": "html5",
         "iconURL": "https://www.algebrahelper.net/assets/img/stack.png"
-    },
-    {
-        "name": "Surviv.io",
-        "id": "surivio",
-        "type": "html5",
-        "iconURL": "https://www.algebrahelper.net/assets/img/survivio.png"
     },
     {
         "name": "Tetris",
